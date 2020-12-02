@@ -16,11 +16,11 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: dotnet publish example/AoC2020.Blazor.csproj --configuration Release --output build
+          run: dotnet publish AoC2020.Blazor.csproj --configuration Release --output build
 
         # Publish the website
         - name: GitHub Pages action
-          if: ${{ github.ref == 'refs/heads/master' }} # Publish only when the push is on master
+          if: ${{ github.ref == 'refs/heads/main' }} # Publish only when the push is on master
           uses: peaceiris/actions-gh-pages@v3.6.1
           with:
             github_token: ${{ secrets.PUBLISH_TOKEN }}
