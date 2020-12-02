@@ -32,6 +32,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        input = await httpClient.GetStringAsync(source);
+        input = await httpClient.GetStringAsync(source.Replace("\r", ""));
     }
 }
