@@ -1,0 +1,37 @@
+﻿@inject HttpClient httpClient;
+@using AoC2020.Blazor.Tasks;
+
+<div class="row">
+    <div class="col">
+        <button class="btn btn-success" @onclick="() => { output = method(input);  }">Run ▶</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col col-lg-6">
+        <h3>Input</h3>
+        <textarea @bind=@input class="input">
+        </textarea>
+    </div>
+    <div class="col col-lg-6">
+        <h3>Output</h3>
+        <textarea @bind=@output class="output">
+        </textarea>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string source { get; set; }
+
+    [Parameter]
+    public Func<string, string> method { get; set; }
+
+    protected string input { get; set; }
+
+    protected string output { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        input = await httpClient.GetStringAsync(source);
+    }
+}
