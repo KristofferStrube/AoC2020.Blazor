@@ -16,7 +16,7 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: dotnet publish example/AoC2020.Blazor.csproj --configuration Release --output build
+          run: dotnet publish AoC2020.Blazor.csproj --configuration Release --output build
 
         # Publish the website
         - name: GitHub Pages action
