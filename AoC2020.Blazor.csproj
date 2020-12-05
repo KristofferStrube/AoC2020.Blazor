@@ -17,6 +17,9 @@
     <Content Update="wwwroot\data\Day2Task1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Update="wwwroot\data\Day5Task1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\data\Day4Task1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
