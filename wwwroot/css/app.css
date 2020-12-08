@@ -63,3 +63,7 @@ a, .btn-link {
 .col {
     margin-bottom: 5px;
 }
+
+.nav-link {
+    height: 1.2rem!important;
+}
