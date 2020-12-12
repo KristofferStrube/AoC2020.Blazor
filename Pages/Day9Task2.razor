@@ -1,0 +1,10 @@
+﻿@page "/Day9Task2"
+<h1>Day 9 - Task 2</h1>
+<label for="preambleSize">Preamble Size:</label>
+<input id="preambleSize" @bind-value=preambleSize /><br />
+
+<CodeShowcase source="data/Day9Task1.txt" method=@((string input) => AoC2020.Blazor.Tasks.Day9Task2.Execute(preambleSize, input)) />
+
+@code {
+    protected string preambleSize = "25";
+}
