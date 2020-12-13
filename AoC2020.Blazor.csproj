@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\data\Day11Task1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\data\Day1Task1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
